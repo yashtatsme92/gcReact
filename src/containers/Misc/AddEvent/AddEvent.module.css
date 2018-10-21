@@ -1,0 +1,226 @@
+.InputLabel {
+    height: 44px;
+    display: block;
+    /* height: 36px; */
+    position: relative;
+    vertical-align: top;
+    cursor: default;
+    padding: 10px;
+}
+
+.InputDiv {
+    top: 8px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    top: 7px;
+}
+
+.InnerInputDiv {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    min-width: 0%;
+    position: relative;
+}
+
+.Input {
+    margin-top: 2px;
+    font-size: 20px;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    background-color: #f5f5f5;
+    color: #222;
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 0%;
+    outline: none;
+    padding: 0;
+    z-index: 0;
+}
+
+.OtherInputContainers {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 40px;
+    padding-right: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-align-items: center;
+    align-items: center;
+    outline: none;
+}
+
+.WhiteSpace {
+    width: 48px;
+    padding-left: 16px;
+    max-height: 40px;
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 56px;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+}
+
+.InputGroup {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.InputRow {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 40px;
+    padding-right: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-align-items: center;
+    align-items: center;
+    outline: none;
+}
+
+.InnerInputRow {
+    padding-left: 0;
+    overflow: visible;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.InnerInputRowDiv {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.TwoGroup {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.paddingFive {
+    padding: 5px;
+}
+
+.Submit {
+    margin-left: 16px;
+    height: 32px;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    line-height: 20px;
+    min-width: 88px;
+    background: #4285f4;
+    color: #fff;
+    -webkit-transition: box-shadow .28s cubic-bezier(0.4,0.0,0.2,1);
+    transition: box-shadow .28s cubic-bezier(0.4,0.0,0.2,1);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    -webkit-user-select: none;
+    -webkit-transition: background .2s .1s;
+    transition: background .2s .1s;
+    border: 0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 4em;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+}

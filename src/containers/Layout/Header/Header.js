@@ -9,7 +9,7 @@ import classes from './Header.module.css';
 
 const Header = props => (
     <div className={classes.Header}>
-        <HeaderIcon/>
+        <HeaderIcon toggleSidePanel={() => props.toggleSidePanel()}/>
         <CalendarControls/>
         <AccountSettings/>
     </div>

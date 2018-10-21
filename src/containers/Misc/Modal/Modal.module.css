@@ -1,0 +1,20 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 70%;
+    border: 1px solid black;
+    padding: 16px;
+    left:15%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+.Close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    cursor: pointer;
+}
