@@ -1,0 +1,74 @@
+.BoxCalendarContainer {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 244px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 8px 0px;
+}
+
+.BoxCalendar {
+    user-select: none;
+    position: relative;
+    padding: 0px 19px 16px;
+}
+
+.BoxCalendarHeader {
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(117, 117, 117);
+    display: flex;
+    align-items: center;
+}
+
+.MonthYear {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding-left: 5px;
+}
+
+.Left {
+    
+    padding: 0px 2px;
+
+}
+
+.Right {
+    padding: 0px 2px;
+}
+
+.Grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.Row {
+    display: table-row;
+    height: 28px;
+}
+
+.RowGroup {
+    display: table-row-group;
+}
+
+.ColumnHeader {
+    display: table-cell;
+    font-size: 10px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: rgb(117, 117, 117);
+}
+
+.Dates {
+    display: table-cell;
+    font-size: 10px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: rgb(117, 117, 117);
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}

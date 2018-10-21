@@ -1,0 +1,107 @@
+.MainPanelContainer {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.MainPanel {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: none;
+}
+
+.MainPanelRow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.Grid {
+    background-color: #fff;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.GridHeader {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+}
+
+.GridBody {
+    -webkit-box-flex: 1 1 60%;
+    -webkit-flex: 1 1 60%;
+    flex: 1 1 60%;
+    position: relative;
+    border-top: #e0e0e0 1px solid;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.BlankCell {
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.GridHeaderDatesContainer {
+    border-left: #e0e0e0 1px solid;
+    margin-left: -1px;
+    -webkit-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.GridHeaderDatesBox {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    pointer-events: none;
+}

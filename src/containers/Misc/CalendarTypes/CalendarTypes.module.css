@@ -1,0 +1,125 @@
+.CalendarTypesContainer {
+    min-height: auto;
+    border-bottom: 0px;
+    overflow: visible;
+    padding: 8px 0px;
+}
+
+.CalendarTypes {
+    padding-bottom: 0px;
+    padding: 8px 0px;
+}
+
+.AddCalendar {
+    margin: 4px 8px 4px 16px;
+}
+
+.Input {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.Add {
+    height: 32px;
+    width: 32px;
+    color: rgba(0, 0, 0, 0.54);
+    fill: rgba(0, 0, 0, 0.54);
+    vertical-align: top;
+    transition: background-color 0s ease 0s, opacity 100ms linear 0s;
+    user-select: none;
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+    display: inline-block;
+    fill: rgb(68, 68, 68);
+    flex-shrink: 0;
+    position: relative;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+    transition: background 0.3s ease 0s;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 50%;
+    outline: none;
+    overflow: hidden;
+}
+
+.SavedCalendarContainer {
+    padding-top: 8px;
+}
+
+.SavedCalendarBox {
+    position: relative;
+}
+
+.SavedCalendarHeader {
+    font-weight: normal;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    height: 32px;
+    margin: 0px;
+    padding: 0px 21px 0px 8px;
+    border-radius: 0px;
+    line-height: 20px;
+    min-width: 88px;
+    white-space: nowrap;
+    transition: background-color 100ms linear 0s;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 0;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+    overflow: hidden;
+}
+
+.SavedCalendarHeaderContent {
+    position: relative;
+}
+
+.SavedCalendarHeaderContentSpan {
+    text-transform: none;
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+    line-height: 32px;
+    width: 100%;
+    margin: 0px 8px;    
+    display: inline-block;
+}
+
+.SavedCalendarHeaderContentDiv {
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SavedCalendarHeaderContentTitle {
+    text-transform: none;
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+    line-height: 32px;
+    width: 100%;
+    margin: 0px 8px;
+}
+
+.SavedCalendarHeaderContentArrow {
+    
+}
+
+.HorizontalSeparator {
+    height: 0px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    margin: 8px 0px;
+}
