@@ -75,6 +75,7 @@
     flex: none;
     -webkit-flex-direction: column;
     flex-direction: column;
+    width: 64px;
 }
 
 .GridHeaderDatesContainer {
@@ -95,13 +96,217 @@
 }
 
 .GridHeaderDatesBox {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-flex: none;
     -webkit-flex: none;
     flex: none;
-    pointer-events: none;
+    overflow: hidden;
+}
+
+.GridHeaderDatesRow {
+    -webkit-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.GridHeaderDatesRowCol {
+    width: 81px;
+    min-width: 81px;
+    
+    -webkit-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    border-right: #e0e0e0 1px solid;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 1 1 0%;
+    -webkit-flex: 1 1 0%;
+    flex: 1 1 0%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+}
+
+.Today {
+    background-color: rgba(0,0,0,0.04);
+}
+
+.HeaderTitle {
+    font-weight: 400;
+    margin: 0;
+    
+    
+}
+
+.HeaderTitleDay {
+    font-size: 12px;
+    line-height: 32px;
+    position: relative;
+    z-index: 2;
+    margin-left: 16px;
+}
+
+
+.HeaderTitleDate {
+    font-size: 48px;
+    line-height: 36px;
+    position: relative;
+    z-index: 2;
+    margin-left: 16px;
+}
+
+.GridBodyContent {
+    overflow: hidden;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: scroll;
+    -webkit-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.TimeContentContainer { 
+    overflow-y: hidden;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    height: 1152px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.TimeContent {
+    position: relative;
+    border-right: #e0e0e0 1px solid;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 64px;
+}
+
+.TimeDiv { 
+    position: relative;
+    height: 48px;
+    text-align: center;
+}
+
+.TimeSpan {
+    display: block;    
+    position: relative;
+    top: -6px;
+    font-size: 10px;
+    color: #212121;
+}
+
+.GMT {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: table;
+    display: table-cell;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: #e0e0e0 1px solid;
+    min-height: 24px;
+    border-bottom: #e0e0e0 1px solid;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    line-height: 24px;
+    font-size: 10px;
+    color: #212121;
+    
+}
+
+.GMTSpan {
+    padding: 0px 3px;
+}
+
+.EventContentContainer {
+    overflow-x: auto;
+    overflow-y: scroll;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.EventContent {
+    min-width: 100%;
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: top;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.ColumnContainer {
+    width: 81px;
+    min-width: 81px;
+    -webkit-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    border-right: #e0e0e0 1px solid;
+    position: relative;
+    /* padding-right: 12px; */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    height: 100%;
+}
+
+.TimeBox {
+    /* margin-top:-6px; */
+    height: 48px;
+    /* border-bottom: #e0e0e0 1px solid; */
+}
+
+.Column {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
