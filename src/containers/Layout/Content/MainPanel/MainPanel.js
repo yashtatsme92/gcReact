@@ -12,58 +12,44 @@ class MainPanel extends Component {
     constructor(props){
         super(props);
         this.state = {
-            Days : [
-                {
-                    Day: "Sun",
-                    Date: "21",
-                    Today : false
-                },
-                {
-                    Day: "Mon",
-                    Date: "22",
-                    Today : false
-                },
-                {
-                    Day: "Tue",
-                    Date: "23",
-                    Today : false
-                },
-                {
-                    Day: "Wed",
-                    Date: "24",
-                    Today : false
-                },
-                {
-                    Day: "Thu",
-                    Date: "25",
-                    Today : false
-                },
-                {
-                    Day: "Fri",
-                    Date: "26",
-                    Today : false
-                },
-                {
-                    Day: "Sat",
-                    Date: "27",
-                    Today : false
-                },
-            ],
+            DateContent: this.DatesContentInitializer(props.currentDate),
             Time: ["12am","1am","2am","3am","4am","5am","6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"],
             Events : [
                 {
-                    fromDate: "2018-10-16",
-                    fromTime: "04:41",
-                    toDate: "2018-10-24",
-                    toTime: "11:11",
+                    fromDate: "2018-10-23",
+                    fromTime: "11:30",
+                    toDate: "2018-10-23",
+                    toTime: "12:00",
                 }
             ],
             showModal: false,
-            todayDate: props.todayDate
+            todayDate: props.todayDate,
+            currentDate: props.currentDate
         }
     }
 
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            DateContent: this.DatesContentInitializer(nextProps.currentDate),
+        })
+    }
 
+    DatesContentInitializer(currentDate){
+        let weekStart = new Date(currentDate.getFullYear(),currentDate.getMonth(), currentDate.getDate() - currentDate.getDay())
+        let DayArr = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        let weekArr = [];
+        for(let i = 0; i < 7; i++) {
+            let nextdate = new Date(weekStart.getFullYear(),weekStart.getMonth(), weekStart.getDate() + i);
+            let DateObj = {
+                Date : nextdate.getDate(),
+                Day : DayArr[i],
+                Month: nextdate.getMonth(),
+                Year: nextdate.getFullYear(),
+            }
+            weekArr.push(DateObj);
+        }
+        return weekArr;
+    }
 
     AddEventSubmitHandler(eventData){
         console.log("From MainPanel");
@@ -112,14 +98,21 @@ class MainPanel extends Component {
                                         <div className={classes.GridHeaderDatesBox}>
                                             <div className={classes.GridHeaderDatesRow}>
                                                 {
-                                                    this.state.Days.map((Day,index) => (
+                                                    this.state.DateContent.map((Day,index) => (
                                                         <div key={index} className={classes.GridHeaderDatesRowCol}>
                                                             <h2 className={classes.HeaderTitle} >
                                                                 <div className={classes.HeaderTitleDay}>
-                                                                    {Day.Day}
+                                                                    { Day.Date === this.state.currentDate.getDate() &&  Day.Month === this.state.currentDate.getMonth() && Day.Year === this.state.currentDate.getFullYear() 
+                                                                    ? (<span className={classes.SelectedDate}>
+                                                                        {Day.Day}
+                                                                    </span>) : Day.Day}
                                                                 </div>
                                                                 <div className={classes.HeaderTitleDate}>
-                                                                    {Day.Date}
+                                                                    { Day.Date === this.state.currentDate.getDate() &&  Day.Month === this.state.currentDate.getMonth() && Day.Year === this.state.currentDate.getFullYear() 
+                                                                    ? (<span className={classes.SelectedDate}>
+                                                                        {Day.Date}
+                                                                    </span>) : Day.Date}
+                                                                    
                                                                 </div>
 
                                                             </h2>
@@ -149,13 +142,18 @@ class MainPanel extends Component {
                                             <div className={classes.EventContent}>
 
                                                 {
-                                                    this.state.Days.map((Day,indexOut) => (
+                                                    this.state.DateContent.map((Day,indexOut) => (
                                                         <div key={indexOut} className={classes.ColumnContainer}>
                                                             <div className={classes.Column}>
                                                             {
                                                                 this.state.Time.map((Time,index) => (
-                                                                    <div className={classes.TimeBox} key={indexOut + "_" + index}>
-                                                                    </div>
+                                                                    <Aux>
+                                                                        <div className={classes.TimeBox} key={indexOut + "_" + index}>
+                                                                        </div>
+                                                                        <div className={classes.TimeBoxUnder} key={indexOut + "_" + index + "_30"}>
+                                                                        </div>
+                                                                    </Aux>
+                                                                    
                                                                 ))
                                                             }
                                                                 <div>

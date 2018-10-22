@@ -10,7 +10,10 @@ import classes from './Header.module.css';
 const Header = props => (
     <div className={classes.Header}>
         <HeaderIcon toggleSidePanel={() => props.toggleSidePanel()}/>
-        <CalendarControls/>
+        <CalendarControls 
+            resetCurrentDate={() => props.resetCurrentDate()}
+            shiftWeek={(shiftType) => props.shiftWeek(shiftType)} 
+            currentDate={props.currentDate}/>
         <AccountSettings/>
     </div>
 );

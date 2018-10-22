@@ -5,16 +5,32 @@ import classes from './BoxCalendar.module.css';
 class BoxCalendar extends Component {
     constructor(props){
         super(props);
-        let currentMonth = props.todayDate.getMonth() + 1;
-        let currentYear = props.todayDate.getFullYear();
+        let currentMonth = props.currentDate.getMonth() + 1;
+        let currentYear = props.currentDate.getFullYear();
+        let currentDate = props.currentDate.getDate();
         this.state = {
             WDays : ["S","M","T","W","T","F","S"],
             currentMonth: currentMonth,
             currentYear: currentYear,
-            currentDateFull : props.todayDate,
+            currentDate: currentDate,
+            currentDateFull : props.currentDate,
+            todayDate: props.todayDate,
             monthNames : ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"]
         }
         this.state.GridArr = this.createCalendar(currentYear,currentMonth)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        let currentMonth = nextProps.currentDate.getMonth() + 1;
+        let currentYear = nextProps.currentDate.getFullYear();
+        let currentDate = nextProps.currentDate.getDate();
+        this.setState({
+            currentMonth: currentMonth,
+            currentYear: currentYear,
+            currentDate: currentDate,
+            currentDateFull : nextProps.currentDate,
+            GridArr: this.createCalendar(currentYear,currentMonth)
+        })
     }
 
     createCalendar(year,month) {
@@ -96,11 +112,18 @@ class BoxCalendar extends Component {
                                         {
                                             
                                             Row.map((Dates,index)=> (
-                                                <span key={indexOut+ "_"+index} className={classes.Dates}>
+                                                <span key={indexOut+ "_"+index} onClick={() => this.props.SelectedDate(new Date(Dates.year,Dates.month -1,Dates.day))} className={classes.Dates}>
                                                     {
                                                         this.state.currentMonth === Dates.month ? (
                                                             <span className={classes.DatesMarked}>
-                                                                {Dates.day}
+                                                                {   
+                                                                    this.state.todayDate.getDate() === Dates.day && this.state.todayDate.getMonth() + 1 === Dates.month && this.state.todayDate.getFullYear() === Dates.year?  
+                                                                    ( <span className={classes.TodayDate}>{Dates.day}</span>) :
+                                                                        this.state.currentDateFull.getDate() === Dates.day  && this.state.currentDateFull.getMonth() + 1 === Dates.month ? (
+                                                                            <span className={classes.CurrentDate}>{Dates.day}</span>
+                                                                        ) : Dates.day
+                                                                     
+                                                                }
                                                            </span>
                                                         ) : 
                                                         Dates.day

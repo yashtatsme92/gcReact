@@ -300,13 +300,21 @@
 }
 
 .TimeBox {
-    /* margin-top:-6px; */
-    height: 48px;
-    /* border-bottom: #e0e0e0 1px solid; */
+    height: 23px;
+    border-bottom: white 1px solid;
+}
+
+.TimeBoxUnder {
+    height: 23px;
+    border-bottom: #e0e0e0 1px solid;
 }
 
 .Column {
     position: relative;
     height: 100%;
     width: 100%;
+}
+
+.SelectedDate {
+    color: #4285f4;
 }

@@ -7,7 +7,7 @@ class AccountSettings extends Component {
     render(){
         return (
             <div className={classes.AccountSettings}>
-                Account Settings
+                
             </div>
         )
     }

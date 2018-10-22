@@ -1,27 +1,24 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Sidebar from './Sidebar/Sidebar';
 import MainPanel from './MainPanel/MainPanel';
 
 import classes from './Content.module.css';
 
-class Content extends Component {
-
-    constructor(props){
-        super(props)
-        this.state = {
-            todayDate : new Date()
-        }
-    }
-    render() {
-        return (
-            <div className={classes.Content}>
-                <Sidebar showSidePanel={this.props.showSidePanel} todayDate={this.state.todayDate}/>
-                <MainPanel todayDate={this.state.todayDate}/>
-            </div>
-        )
-    }
-} 
+const Content = props => (
+    <div className={classes.Content}>
+        <Sidebar 
+            SelectedDate={(date) => props.SelectedDate(date)}
+            showSidePanel={props.showSidePanel} 
+            currentDate={props.currentDate} 
+            todayDate={props.todayDate}
+        />
+        <MainPanel 
+            currentDate={props.currentDate} 
+            todayDate={props.todayDate}
+        />
+    </div>
+)
 
 
 export default Content;

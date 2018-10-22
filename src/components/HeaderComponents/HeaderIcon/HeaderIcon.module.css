@@ -20,3 +20,10 @@
     width: 24px;
     cursor: pointer;
 }
+
+.Hamburger {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 3px 0;
+}

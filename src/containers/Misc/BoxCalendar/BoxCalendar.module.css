@@ -78,3 +78,30 @@
     color: black;
     font-weight: 600
 }
+
+.CurrentDate {
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 100ms linear;
+    background-color: #e0e0e0;
+}
+
+.TodayDate {
+    color: white;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 100ms linear;
+    background-color: #4285f4;
+}

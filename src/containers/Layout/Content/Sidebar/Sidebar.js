@@ -13,8 +13,12 @@ const Sidebar = props => (
     }} className={classes.SidebarContainer}>
         <div className={classes.SidebarRow}>
             <div className={classes.Sidebar}>
-                <BoxCalendar todayDate={props.todayDate}/>
-                <CalendarTypes/>
+                <BoxCalendar  
+                    SelectedDate={(date) => props.SelectedDate(date)}
+                    currentDate={props.currentDate} 
+                    todayDate={props.todayDate}
+                />
+                {/* <CalendarTypes/> */}
                 <div className={classes.TermsAndCondtions}>
                     <a className={classes.TnC}  href="//www.google.com/intl/en/policies/terms/"  tabIndex="-1">Terms</a>
                     -

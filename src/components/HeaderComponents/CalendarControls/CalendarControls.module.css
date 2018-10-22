@@ -1,16 +1,4 @@
 .CalendarControls {
-    /* height: 48px;
-    vertical-align: middle;
-    white-space: nowrap;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-user-select: none; */
     -webkit-box-pack: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between;
@@ -27,5 +15,38 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-user-select: none;
+}
+
+.CalendarControlsLeftContainer {
+    min-width: initial!important;
+    min-width: auto!important;
+    text-align: right;
+    line-height: 0;
+    -webkit-user-select: none;
+}
+
+.CalendarControlsLeftDiv {
+    overflow: hidden;
+    display: table-cell;
+    height: 48px;
+    vertical-align: middle;
+    text-align: initial;
+    line-height: 0;
+    -webkit-user-select: none;
+}
+
+.CalendarControlsLeftInnerDiv {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: normal;
+    width: 100%;
+    text-align: initial;
+    line-height: 0;
     -webkit-user-select: none;
 }
