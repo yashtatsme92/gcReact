@@ -4,6 +4,7 @@ import Modal from './../../../Misc/Modal/Modal';
 import Aux from './../../../../hoc/Auxiliary/Auxiliary';
 import AddEvent from './../../../Misc/AddEvent/AddEvent';
 import EventDisplay from './../../../Misc/EventDisplay/EventDisplay';
+import EventList from './../../../Misc/EventList/EventList';
 import Addwidget from './../../../Misc/AddWidget/AddWidget';
 
 import classes from './MainPanel.module.css';
@@ -17,27 +18,28 @@ class MainPanel extends Component {
             Time: ["12am","1am","2am","3am","4am","5am","6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"],
             Events : [
                 {   
-                    title: "SOME TITLE",
+                    title: "SOME Event",
                     fromDate: "2018-10-21",
                     fromTime: "11:30am",
                     toDate: "2018-10-21",
                     toTime: "12:00pm",
                 },{   
-                    title: "SOME TILILILTILILT",
+                    title: "SOME Other Event",
                     fromDate: "2018-10-21",
                     fromTime: "11:30am",
                     toDate: "2018-10-21",
                     toTime: "12:00pm",
                 },{   
-                    title: "SOME OTHER",
-                    fromDate: "2018-10-21",
+                    title: "SOME Very Other Event",
+                    fromDate: "2018-10-24",
                     fromTime: "11:30am",
-                    toDate: "2018-10-21",
+                    toDate: "2018-10-24",
                     toTime: "12:00pm",
                 }
             ],
             showModal: false,
-            modalType: "",
+            showModalList: true,
+            modalType: "A",
             todayDate: props.todayDate,
             currentDate: props.currentDate
         }
@@ -86,19 +88,27 @@ class MainPanel extends Component {
         })
     }
 
-    EditEventHandler() {
+    EditDeleteEventHandler(){
+        this.setState({
+            showModalList: !this.state.showModalList
+        })
+    }
+
+    EditEventHandler(eventPos) {
         this.setState({
             modalType: "E",
         })
         this.setState({
             showModal: !this.state.showModal,
-            
+            showModalList: !this.state.showModalList,
+            EventsData : this.state.Events[eventPos],
+            eventPos: eventPos
         })
     }
 
-    DeleteEvent() {
+    DeleteEvent(eventPos) {
         let eventsArr = this.state.Events;
-        eventsArr.splice(0,1);
+        eventsArr.splice(eventPos,1);
 
         this.setState({
             modalType: "A",
@@ -113,6 +123,12 @@ class MainPanel extends Component {
         })
     }
 
+    CloseModalList() {
+        this.setState({
+            showModalList: false
+        })
+    }
+
     render() {
         return (
             <Aux>
@@ -122,7 +138,13 @@ class MainPanel extends Component {
                 >
                     {this.state.modalType === "A" ?
                     <AddEvent EditDeleteEvent={this.state.modalType} AddEventHandler={(eventData) => this.AddEventSubmitHandler(eventData)}/> 
-                    : <AddEvent DeleteEvent={() => this.DeleteEvent()} eventPos="0" EditDeleteEvent={this.state.modalType} EventData={this.state.Events.length ? this.state.Events[0] : null} AddEventHandler={(eventData) => this.AddEventSubmitHandler(eventData)}/> }
+                    : <AddEvent eventPos={this.state.eventPos} EditDeleteEvent={this.state.modalType} EventData={this.state.Events.length ? this.state.EventsData : null} AddEventHandler={(eventData) => this.AddEventSubmitHandler(eventData)}/> }
+                </Modal>
+                <Modal
+                    CloseModal={() => this.CloseModalList()}
+                    show ={this.state.showModalList}
+                >
+                    <EventList EditEvent={(eventPos) => this.EditEventHandler(eventPos)} DeleteEvent={(eventPos) => this.DeleteEvent(eventPos)} EventList={this.state.Events}/>
                 </Modal>
                 <div className={classes.MainPanelContainer}>
                     <div className={classes.MainPanel}>
@@ -205,10 +227,12 @@ class MainPanel extends Component {
                 </div>
                 <div className={classes.WidgetArea}>
                 <Addwidget 
+                    Text={"Add"}
                     EventTrigger={ () => this.AddEventHandler()} 
                 />
                 <Addwidget 
-                    EventTrigger={ () => this.EditEventHandler()} 
+                    Text={"Edit"}
+                    EventTrigger={ () => this.EditDeleteEventHandler()} 
                 />
                 </div>
                 

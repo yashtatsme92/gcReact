@@ -7,6 +7,7 @@ class AddWidget extends Component {
         return (
             <div className={classes.AddWidgetContainer}>
                 <div onClick={() => this.props.EventTrigger()} className={classes.AddWidget}>
+                    <span className={classes.TextClass}>{this.props.Text}</span>
                 </div>
             </div>
         )

@@ -27,4 +27,10 @@
     text-align: center;
     width: 56px;
     z-index: 4000;
+    /* vertical-align: middle; */
+}
+
+.TextClass {
+    color: #fff;
+    margin: 10px;
 }

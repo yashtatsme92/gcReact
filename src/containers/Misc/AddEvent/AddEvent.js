@@ -118,13 +118,7 @@ class AddEvent extends Component {
                         this.props.EditDeleteEvent !== "A"  ? (<span>Edit Event</span>) : (<span>Add Event?</span>) 
                     }
                     </div>
-                    
-                        {this.props.EditDeleteEvent !== "A"  ? 
-                            <div onClick={() => this.props.DeleteEvent()} className={[classes.divFloat,classes.cursor].join(" ")}>
-                                <span>DELETE</span> 
-                            </div>
-                            : null}
-                    </div>
+                </div>
                 
                 
                 

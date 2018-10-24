@@ -1,0 +1,26 @@
+.EventsContainer {
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.EventContainer {
+    /* display: flex; */
+    /* display: inline; */
+    padding: 10px;
+    width: 100%
+}
+
+.EventName {
+    display: inline;
+    padding: 10px;
+}
+
+.DivClass {
+    cursor: pointer;
+    display: inline;
+    padding: 10px;
+    margin-right: 20px; 
+    float: right;
+}
