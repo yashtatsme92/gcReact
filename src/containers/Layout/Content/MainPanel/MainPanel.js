@@ -38,7 +38,7 @@ class MainPanel extends Component {
                 }
             ],
             showModal: false,
-            showModalList: true,
+            showModalList: false,
             modalType: "A",
             todayDate: props.todayDate,
             currentDate: props.currentDate
