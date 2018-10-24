@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BoxCalendar from './../../../Misc/BoxCalendar/BoxCalendar';
-import CalendarTypes from './../../../Misc/CalendarTypes/CalendarTypes';
+// import CalendarTypes from './../../../Misc/CalendarTypes/CalendarTypes';
 
 import classes from './Sidebar.module.css';
 

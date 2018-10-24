@@ -6,7 +6,7 @@ class AddWidget extends Component {
     render() {
         return (
             <div className={classes.AddWidgetContainer}>
-                <div onClick={() => this.props.AddEventTrigger()} className={classes.AddWidget}>
+                <div onClick={() => this.props.EventTrigger()} className={classes.AddWidget}>
                 </div>
             </div>
         )

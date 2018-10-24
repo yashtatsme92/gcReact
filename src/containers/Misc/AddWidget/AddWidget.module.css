@@ -1,9 +1,11 @@
 .AddWidgetContainer {
-    display: inline-block;
-    position: absolute;
-    right: 81px;
+    /* display: inline-block; */
+    display: block;
+    position: relative;
+    margin-right: 10px; 
+    /* right: 81px;
     bottom: 24px;
-    z-index: 505;
+    z-index: 505; */
 }
 
 .AddWidget {

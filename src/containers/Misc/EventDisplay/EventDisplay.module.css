@@ -1,0 +1,14 @@
+.TimeBox {
+    height: 23px;
+    border-bottom: white 1px solid;
+}
+
+.TimeBoxUnder {
+    height: 23px;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.Selected {
+    background-color: #4285f4;
+    cursor: pointer;
+}

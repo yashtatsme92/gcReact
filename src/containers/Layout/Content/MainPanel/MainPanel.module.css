@@ -318,3 +318,12 @@
 .SelectedDate {
     color: #4285f4;
 }
+
+.WidgetArea {
+    display: flex;
+
+    position: absolute;
+    right: 81px;
+    bottom: 24px;
+    z-index: 505;
+}
